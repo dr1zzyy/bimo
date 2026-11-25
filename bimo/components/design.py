@@ -75,7 +75,7 @@ class desing:
     glow:   bool = False
     style:  _Style | list[_Style] = styles.DEFAULT
 
-    # -------------------------------------------------- validación
+    # - validación
     def __post_init__(self):
         if not isinstance(self.color, _Color):
             raise TypeError(f"color must be _Color, got {type(self.color).__name__}")
@@ -86,7 +86,7 @@ class desing:
         # deja siempre una lista (más fácil de iterar después)
         self.style = _as_style_list(self.style)
 
-    # -------------------------------------------------- ANSI
+    # - ANSI
     def codes(self) -> list[int]:
         """Devuelve la lista de códigos SGR en orden."""
         out = [s.value for s in self.style if s.value > 0]
