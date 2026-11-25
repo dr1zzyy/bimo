@@ -93,16 +93,6 @@ python -m pip install .
 python -m pip install -e .
 ```
 
-### Publishing
-
-Bump the version in both `pyproject.toml` and `bimo/__init__.py`, then:
-
-```bash
-python -m pip install build twine
-python -m build
-python -m twine upload dist/*
-```
-
 ## Quick start
 
 Create a design:
